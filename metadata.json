@@ -14,7 +14,7 @@
     {
       "name": "TMC5161",
       "type": "EmbeddedTMC5161",
-      "icon": "EmbeddedTouch.svg",
+      "icon": "EmbeddedMotor.svg",
       "defaultAbility": "setVelocity",
       "defaultTrigger": "velocitySet",
       "hidden": false,
