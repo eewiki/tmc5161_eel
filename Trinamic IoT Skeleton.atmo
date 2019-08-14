@@ -1,0 +1,1689 @@
+{
+  "name": "Trinamic IoT Template",
+  "createVersion": "2017-08-12",
+  "description": "New Project",
+  "lastModified": "2019-07-19T18:44:22.213Z",
+  "created": "2019-07-19T18:44:22.213Z",
+  "meta": {
+    "projectTypeName": "AVR IoT WG",
+    "projectTypeId": "AvrIoT"
+  },
+  "planes": {
+    "AVR-IoT WG": {
+      "type": "avriot",
+      "compilerVersion": "latest",
+      "variants": [],
+      "meta": {},
+      "elements": [
+        {
+          "name": "VelocityChangeCmd",
+          "type": "EmbeddedCloudCommand",
+          "variants": [
+            "embedded",
+            "triggers",
+            "abilities",
+            "properties",
+            "variables",
+            "embeddedCloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(VelocityChangeCmd), ATMO_ABILITY(VelocityChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(VelocityChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 100,
+            "editorY": 0
+          },
+          "triggers": {
+            "triggered": [],
+            "commandReceived": []
+          },
+          "interruptAbilities": {
+            "trigger": false,
+            "setup": false,
+            "commandReceived": true
+          },
+          "abilities": [
+            {
+              "name": "trigger",
+              "triggers": [
+                "triggered"
+              ]
+            },
+            {
+              "name": "setup",
+              "triggers": []
+            },
+            {
+              "name": "commandReceived",
+              "triggers": [
+                "commandReceived"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AccelChangeCmd",
+          "type": "EmbeddedCloudCommand",
+          "variants": [
+            "embedded",
+            "triggers",
+            "abilities",
+            "properties",
+            "variables",
+            "embeddedCloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(AccelChangeCmd), ATMO_ABILITY(AccelChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(AccelChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 98,
+            "editorY": 89,
+            "lastTrigger": "commandReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandReceived": []
+          },
+          "interruptAbilities": {
+            "trigger": false,
+            "setup": false,
+            "commandReceived": true
+          },
+          "abilities": [
+            {
+              "name": "trigger",
+              "triggers": [
+                "triggered"
+              ]
+            },
+            {
+              "name": "setup",
+              "triggers": []
+            },
+            {
+              "name": "commandReceived",
+              "triggers": [
+                "commandReceived"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PositionChangeCmd",
+          "type": "EmbeddedCloudCommand",
+          "variants": [
+            "embedded",
+            "triggers",
+            "abilities",
+            "properties",
+            "variables",
+            "embeddedCloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(PositionChangeCmd), ATMO_ABILITY(PositionChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(PositionChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 96,
+            "editorY": 179,
+            "lastTrigger": "commandReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandReceived": []
+          },
+          "interruptAbilities": {
+            "trigger": false,
+            "setup": false,
+            "commandReceived": true
+          },
+          "abilities": [
+            {
+              "name": "trigger",
+              "triggers": [
+                "triggered"
+              ]
+            },
+            {
+              "name": "setup",
+              "triggers": []
+            },
+            {
+              "name": "commandReceived",
+              "triggers": [
+                "commandReceived"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DirectionChangeCmd",
+          "type": "EmbeddedCloudCommand",
+          "variants": [
+            "embedded",
+            "triggers",
+            "abilities",
+            "properties",
+            "variables",
+            "embeddedCloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(DirectionChangeCmd), ATMO_ABILITY(DirectionChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(DirectionChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_BOOL"
+          },
+          "meta": {
+            "editorX": 96,
+            "editorY": 269,
+            "lastTrigger": "commandReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandReceived": []
+          },
+          "interruptAbilities": {
+            "trigger": false,
+            "setup": false,
+            "commandReceived": true
+          },
+          "abilities": [
+            {
+              "name": "trigger",
+              "triggers": [
+                "triggered"
+              ]
+            },
+            {
+              "name": "setup",
+              "triggers": []
+            },
+            {
+              "name": "commandReceived",
+              "triggers": [
+                "commandReceived"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MotorStopCmd",
+          "type": "EmbeddedCloudCommand",
+          "variants": [
+            "embedded",
+            "triggers",
+            "abilities",
+            "properties",
+            "variables",
+            "embeddedCloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(MotorStopCmd), ATMO_ABILITY(MotorStopCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(MotorStopCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_VOID"
+          },
+          "meta": {
+            "editorX": 94,
+            "editorY": 357,
+            "lastTrigger": "commandReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandReceived": []
+          },
+          "interruptAbilities": {
+            "trigger": false,
+            "setup": false,
+            "commandReceived": true
+          },
+          "abilities": [
+            {
+              "name": "trigger",
+              "triggers": [
+                "triggered"
+              ]
+            },
+            {
+              "name": "setup",
+              "triggers": []
+            },
+            {
+              "name": "commandReceived",
+              "triggers": [
+                "commandReceived"
+              ]
+            }
+          ]
+        }
+      ],
+      "libraries": {
+        "temt6000": {
+          "libName": "temt6000",
+          "manufacturer": "Vishay",
+          "description": "Ambient Light Sensor",
+          "type": "Ambient Light Sensor",
+          "icon": "",
+          "image": "",
+          "version": "",
+          "eelVersion": "3",
+          "shoppingCartLinks": {
+            "digikey": {
+              "links": {
+                "info": "https://www.digikey.com/short/p3mw3b"
+              },
+              "cartData": {
+                "part": "1568-1048-ND",
+                "source": "dkstudio",
+                "qty": "1"
+              }
+            }
+          },
+          "requires": [
+            "embedded",
+            "adc",
+            "fpmath"
+          ],
+          "elements": [
+            {
+              "name": "TEMT6000AmbientLight",
+              "type": "EmbeddedTemt6000",
+              "icon": "EmbeddedAmbientLight.svg",
+              "helpPageHref": "https://developer.atmosphereiot.com/documents/elements/temt6000element.html",
+              "defaultAbility": "readAmbientLight",
+              "defaultTrigger": "ambientLightRead",
+              "hidden": false,
+              "abilities": [
+                {
+                  "name": "setup",
+                  "hidden": true,
+                  "code": "    return ATMO_Status_Success;"
+                },
+                {
+                  "name": "readAmbientLight",
+                  "triggers": [
+                    "ambientLightRead"
+                  ],
+                  "code": "int32_t voltage = 0;\nATMO_ADC_Status_t status = ATMO_ADC_Read(ATMO_PROPERTY(undefined, adcInstance), ATMO_PROPERTY(undefined, adcPin), ATMO_ADC_VoltageUnits_MilliVolts, &voltage, 1);\n\nif(status != ATMO_ADC_Status_Success)\n{\n    return ATMO_Status_Fail;\n}\n\nfloat lux = (voltage / 10.0) * 2.0;\nATMO_CreateValueFloat(out, lux);\nreturn (status == ATMO_ADC_Status_Success) ? ATMO_Status_Success : ATMO_Status_Fail;"
+                },
+                {
+                  "name": "readAmbientLightRaw",
+                  "triggers": [
+                    "ambientLightRawRead"
+                  ],
+                  "code": "int32_t voltage = 0;\nATMO_ADC_Status_t status = ATMO_ADC_ReadRaw(ATMO_PROPERTY(undefined, adcInstance), ATMO_PROPERTY(undefined, adcPin), &voltage, 1);\n\nif(status != ATMO_ADC_Status_Success)\n{\n    return ATMO_Status_Fail;\n}\n\nATMO_CreateValueInt(out, voltage);\nreturn ATMO_Status_Success;"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "adcInstance",
+                  "input": "driverInstance",
+                  "driverType": "adc"
+                },
+                {
+                  "name": "adcPin",
+                  "input": "number",
+                  "value": 0
+                },
+                {
+                  "name": "pullDownValue",
+                  "input": "number",
+                  "value": "10000"
+                }
+              ],
+              "triggers": [],
+              "variables": [],
+              "language": {
+                "en-US": {
+                  "EmbeddedTemt6000": "TEMT6000 Ambient Light",
+                  "adcInstance": "ADC Driver Instance",
+                  "adcPin": "ADC Pin",
+                  "readAmbientLight": "Read Ambient Light (lux)",
+                  "ambientLightRead": "Ambient Light Read (lux)",
+                  "readAmbientLightRaw": "Read Ambient Light (raw)",
+                  "ambientLightRawRead": "Ambient Light Read (raw)",
+                  "pullDownValue": "Pull-Down Resistor Value"
+                }
+              }
+            }
+          ],
+          "files": {},
+          "md5": "8f418d24dc069dff6ddd21ab72028051"
+        },
+        "mcp9808": {
+          "libName": "mcp9808",
+          "manufacturer": "Microchip",
+          "description": "Temperature Sensor",
+          "type": "Temperature Sensor",
+          "icon": "",
+          "image": "",
+          "version": "",
+          "eelVersion": "3",
+          "shoppingCartLinks": {
+            "digikey": {
+              "links": {
+                "info": "https://www.digikey.com/short/p3hwmm"
+              },
+              "cartData": {
+                "part": "1528-1032-ND",
+                "partid": "1782",
+                "source": "dkstudio",
+                "qty": "1"
+              }
+            }
+          },
+          "requires": [
+            "embedded",
+            "i2c",
+            "fpmath"
+          ],
+          "elements": [
+            {
+              "name": "MCP9808Temperature",
+              "type": "EmbeddedMCP9808",
+              "icon": "EmbeddedTemperature.svg",
+              "defaultAbility": "readAmbientTemperature",
+              "defaultTrigger": "ambientTemperatureRead",
+              "hidden": false,
+              "helpPageHref": "https://developer.atmosphereiot.com/documents/elements/texasinstrumentstmp006element.html",
+              "abilities": [
+                {
+                  "name": "setup",
+                  "hidden": true,
+                  "code": "    if (!ATMO_MCP9808_Init(ATMO_PROPERTY(undefined, i2cInstance), ATMO_PROPERTY(undefined, i2cAddress)))\n    {\n        return ATMO_Status_Fail;\n    }\n    return ATMO_Status_Success;"
+                },
+                {
+                  "name": "readAmbientTemperature",
+                  "triggers": [
+                    "ambientTemperatureRead"
+                  ],
+                  "code": "    float temp = 0;\n\n    if (!ATMO_MCP9808_ReadTemperature(&temp))\n    {\n        return ATMO_Status_Fail;\n    }\n\n    ATMO_CreateValueFloat(out, temp);\n    return ATMO_Status_Success;"
+                }
+              ],
+              "properties": [
+                {
+                  "name": "i2cInstance",
+                  "input": "driverInstance",
+                  "driverType": "i2c"
+                },
+                {
+                  "name": "i2cAddress",
+                  "input": "select",
+                  "inputOptions": [
+                    "0x18",
+                    "0x19",
+                    "0x1A",
+                    "0x1B",
+                    "0x1C",
+                    "0x1D",
+                    "0x1E",
+                    "0x1F"
+                  ],
+                  "value": "0x18"
+                }
+              ],
+              "triggers": [],
+              "variables": [],
+              "language": {
+                "en-US": {
+                  "EmbeddedMCP9808": "MCP9808 Temperature",
+                  "i2cInstance": "I2C Driver Instance",
+                  "i2cAddress": "I2C Address",
+                  "readAmbientTemperature": "Read Ambient Temperature (°C)",
+                  "ambientTemperatureRead": "Ambient Temperature Read"
+                }
+              }
+            }
+          ],
+          "files": {
+            "common": {
+              "headers": {
+                "mcp9808.h": "#ifndef __ATMO_MCP9808_H_\n#define __ATMO_MCP9808_H_\n\n#include \"../atmo/core.h\"\n#include \"../app_src/atmosphere_platform.h\"\n\nATMO_BOOL_t ATMO_MCP9808_Init(ATMO_DriverInstanceHandle_t i2cHandle, uint8_t i2cAddr);\n\nATMO_BOOL_t ATMO_MCP9808_ReadTemperature(float *temperatureC);\n\n#endif"
+              },
+              "objects": {
+                "mcp9808.c": "#include \"mcp9808.h\"\n#include \"../i2c/i2c.h\"\n\nstatic ATMO_BOOL_t _ATMO_MCP9808_Initialized = false;\nstatic ATMO_DriverInstanceHandle_t _ATMO_MCP9808_I2CInstance = 0;\nstatic uint8_t _ATMO_MCP9808_Addr = 0;\n\n#define MCP9808_REG_CONFIG 0x01 ///< MCP9808 config register\n\n#define MCP9808_REG_CONFIG_SHUTDOWN 0x0100   ///< shutdown config\n#define MCP9808_REG_CONFIG_CRITLOCKED 0x0080 ///< critical trip lock\n#define MCP9808_REG_CONFIG_WINLOCKED 0x0040  ///< alarm window lock\n#define MCP9808_REG_CONFIG_INTCLR 0x0020     ///< interrupt clear\n#define MCP9808_REG_CONFIG_ALERTSTAT 0x0010  ///< alert output status\n#define MCP9808_REG_CONFIG_ALERTCTRL 0x0008  ///< alert output control\n#define MCP9808_REG_CONFIG_ALERTSEL 0x0004   ///< alert output select\n#define MCP9808_REG_CONFIG_ALERTPOL 0x0002   ///< alert output polarity\n#define MCP9808_REG_CONFIG_ALERTMODE 0x0001  ///< alert output mode\n\n#define MCP9808_REG_UPPER_TEMP 0x02   ///< upper alert boundary\n#define MCP9808_REG_LOWER_TEMP 0x03   ///< lower alert boundery\n#define MCP9808_REG_CRIT_TEMP 0x04    ///< critical temperature\n#define MCP9808_REG_AMBIENT_TEMP 0x05 ///< ambient temperature\n#define MCP9808_REG_MANUF_ID 0x06     ///< manufacture ID\n#define MCP9808_REG_DEVICE_ID 0x07    ///< device ID\n#define MCP9808_REG_RESOLUTION 0x08   ///< resolutin\n\nstatic ATMO_BOOL_t _ATMO_MCP9808_Read2ByteReg(uint8_t regAddr, uint16_t *data)\n{\n    uint8_t val[2] = {0};\n\n    ATMO_I2C_Status_t status = ATMO_I2C_MasterRead(_ATMO_MCP9808_I2CInstance, _ATMO_MCP9808_Addr, &regAddr, 1, (uint8_t *)val, 2, 1000);\n\n    if(status != ATMO_I2C_Status_Success)\n    {\n        return false;\n    }\n\n    (*data) = ((uint16_t)val[0]) << 8 | val[1]; // Swap the bytes\n\n    return true;\n}\n\nstatic ATMO_BOOL_t _ATMO_MCP9808_Write2ByteReg(uint8_t regAddr, uint16_t data)\n{\n    uint8_t writeData[2] = {((data >> 8) & 0xFF),  ((data & 0xFF) << 8)};\n\n    ATMO_I2C_Status_t status = ATMO_I2C_MasterWrite(_ATMO_MCP9808_I2CInstance, _ATMO_MCP9808_Addr, &regAddr, 1, (uint8_t *)writeData, 2, 1000);\n\n    return status == ATMO_I2C_Status_Success;\n}\n\nATMO_BOOL_t ATMO_MCP9808_Init(ATMO_DriverInstanceHandle_t i2cHandle, uint8_t i2cAddr)\n{\n    _ATMO_MCP9808_I2CInstance = i2cHandle;\n    _ATMO_MCP9808_Addr = i2cAddr;\n\n    uint16_t manufId = 0;\n    if (!_ATMO_MCP9808_Read2ByteReg(MCP9808_REG_MANUF_ID, &manufId))\n    {\n        ATMO_PLATFORM_DebugPrint(\"Error reading Man Id\\r\\n\");\n        return false;\n    }\n\n    if (manufId != 0x0054)\n    {\n        ATMO_PLATFORM_DebugPrint(\"Manufacturer ID Mismtach (Rcv %04X Expect %04X)\\r\\n\", manufId, 0x0054);\n        return false;\n    }\n\n    uint16_t devId = 0;\n    if (!_ATMO_MCP9808_Read2ByteReg(MCP9808_REG_DEVICE_ID, &devId))\n    {\n        ATMO_PLATFORM_DebugPrint(\"Error reading Dev Id\\r\\n\");\n        return false;\n    }\n\n    if (devId != 0x0400)\n    {\n        ATMO_PLATFORM_DebugPrint(\"Dev ID Mismtach (Rcv %04X Expect %04X)\\r\\n\", devId, 0x0400);\n        return false;\n    }\n\n    if (!_ATMO_MCP9808_Write2ByteReg(MCP9808_REG_CONFIG, 0x0))\n    {\n        ATMO_PLATFORM_DebugPrint(\"Error writing config\\r\\n\");\n        return false;\n    }\n\n    _ATMO_MCP9808_Initialized = true;\n    return true;\n}\n\nATMO_BOOL_t ATMO_MCP9808_ReadTemperature(float *temperatureC)\n{\n    if (!_ATMO_MCP9808_Initialized)\n    {\n        return false;\n    }\n\n    uint16_t rawTemp = 0;\n    if (!_ATMO_MCP9808_Read2ByteReg(MCP9808_REG_AMBIENT_TEMP, &rawTemp))\n    {\n        return false;\n    }\n\n    // From https://github.com/adafruit/Adafruit_MCP9808_Library/blob/master/Adafruit_MCP9808.cpp\n    float temp = rawTemp & 0x0FFF;\n    temp /= 16.0;\n    if (rawTemp & 0x1000)\n    {\n        temp -= 256;\n    }\n\n    *temperatureC = temp;\n    \n    return true;\n}"
+              }
+            }
+          },
+          "md5": "6e7264b7e235a2aca9e235df5a97cd67"
+        }
+      },
+      "drivers": {
+        "adc": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_ADC_ADC1"
+          }
+        ],
+        "ble": [],
+        "block": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_BLOCK_BLOCK1"
+          }
+        ],
+        "embeddedCloud": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1"
+          }
+        ],
+        "datetime": [],
+        "filesytem": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_FILESYSTEM_FILESYSTEM1"
+          }
+        ],
+        "gpio": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_GPIO_GPIO1"
+          }
+        ],
+        "http": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_HTTP_HTTP1",
+            "primary": true
+          }
+        ],
+        "i2c": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_I2C_I2C1",
+            "primary": true
+          }
+        ],
+        "interval": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_INTERVAL_INTERVAL1"
+          }
+        ],
+        "nfc": [],
+        "pwm": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_PWM_PWM1"
+          }
+        ],
+        "spi": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_SPI_SPI1"
+          }
+        ],
+        "uart": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_UART_UART1"
+          }
+        ],
+        "wifi": [
+          {
+            "id": 0,
+            "name": "ATMO_DRIVERINSTANCE_WIFI_WIFI1"
+          }
+        ]
+      },
+      "static": {
+        "header": "",
+        "footer": "",
+        "functions": {
+          "ATMO_Setup": {
+            "returnType": "void",
+            "code": "",
+            "arguments": []
+          }
+        }
+      }
+    },
+    "Application": {
+      "type": "app",
+      "compilerVersion": "latest",
+      "variants": [],
+      "meta": {
+        "appViewLayouts": {
+          "320": {
+            "560": true
+          }
+        }
+      },
+      "elements": [
+        {
+          "name": "Velocityabel",
+          "type": "AppUILabel",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 10,
+                  "x": 20,
+                  "y": 140,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "text": "{Velocity: }",
+            "font": "18px Helvetica",
+            "color": "black",
+            "alignment": "center"
+          },
+          "meta": {
+            "editorX": 117,
+            "editorY": 263,
+            "lastTrigger": "triggered"
+          },
+          "triggers": {
+            "triggered": []
+          }
+        },
+        {
+          "name": "VelocitySlider",
+          "type": "AppUISlider",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 30,
+                  "x": 20,
+                  "y": 190,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "value": 0,
+            "stepping": 1,
+            "minValue": 0,
+            "maxValue": 100
+          },
+          "meta": {
+            "editorX": 25,
+            "editorY": 203,
+            "lastTrigger": "changed"
+          },
+          "triggers": {
+            "triggered": [],
+            "changed": [
+              {
+                "mapping": {
+                  "text": {
+                    "code": "{\"Velocity\": value}"
+                  }
+                },
+                "targetOrder": [
+                  "text"
+                ],
+                "targetElement": "Velocityabel",
+                "targetAbility": "setText"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "VelocityChangeEvent",
+                "targetAbility": "send"
+              }
+            ]
+          }
+        },
+        {
+          "name": "VelocityChangeEvent",
+          "type": "AppCloudEvent",
+          "variants": [
+            "app"
+          ],
+          "properties": {
+            "errorData": null
+          },
+          "meta": {
+            "editorX": 226,
+            "editorY": 202,
+            "lastTrigger": "sent"
+          },
+          "triggers": {
+            "triggered": [],
+            "sent": []
+          }
+        },
+        {
+          "name": "AccelSlider",
+          "type": "AppUISlider",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 30,
+                  "x": 20,
+                  "y": 310,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "value": 0,
+            "stepping": 1,
+            "minValue": 0,
+            "maxValue": 100
+          },
+          "meta": {
+            "editorX": 23,
+            "editorY": 351,
+            "lastTrigger": "changed"
+          },
+          "triggers": {
+            "triggered": [],
+            "changed": [
+              {
+                "mapping": {
+                  "text": {
+                    "code": "{\"Acceleration\": value}"
+                  }
+                },
+                "targetOrder": [
+                  "text"
+                ],
+                "targetElement": "AccelLabel",
+                "targetAbility": "setText"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "AccelChangeEvent",
+                "targetAbility": "send"
+              }
+            ]
+          }
+        },
+        {
+          "name": "AccelLabel",
+          "type": "AppUILabel",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 10,
+                  "x": 20,
+                  "y": 260,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "text": "{Acceleration: }",
+            "font": "18px Helvetica",
+            "color": "black",
+            "alignment": "center"
+          },
+          "meta": {
+            "editorX": 118,
+            "editorY": 401,
+            "lastTrigger": "triggered"
+          },
+          "triggers": {
+            "triggered": []
+          }
+        },
+        {
+          "name": "AccelChangeEvent",
+          "type": "AppCloudEvent",
+          "variants": [
+            "app"
+          ],
+          "properties": {
+            "errorData": null
+          },
+          "meta": {
+            "editorX": 222,
+            "editorY": 350,
+            "lastTrigger": "sent"
+          },
+          "triggers": {
+            "triggered": [],
+            "sent": []
+          }
+        },
+        {
+          "name": "PositionSlider",
+          "type": "AppUISlider",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 30,
+                  "x": 20,
+                  "y": 70,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "value": 0,
+            "stepping": 1,
+            "minValue": 0,
+            "maxValue": 100
+          },
+          "meta": {
+            "editorX": 26,
+            "editorY": 59,
+            "lastTrigger": "changed"
+          },
+          "triggers": {
+            "triggered": [],
+            "changed": [
+              {
+                "mapping": {
+                  "text": {
+                    "code": "{\"Position\": value}"
+                  }
+                },
+                "targetOrder": [
+                  "text"
+                ],
+                "targetElement": "PositionLabel",
+                "targetAbility": "setText"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "PositionChangeEvent",
+                "targetAbility": "send"
+              }
+            ]
+          }
+        },
+        {
+          "name": "PositionLabel",
+          "type": "AppUILabel",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 280,
+                  "height": 10,
+                  "x": 20,
+                  "y": 20,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "text": "{Position: }",
+            "font": "18px Helvetica",
+            "color": "black",
+            "alignment": "center"
+          },
+          "meta": {
+            "editorX": 125,
+            "editorY": 117,
+            "lastTrigger": "triggered"
+          },
+          "triggers": {
+            "triggered": []
+          }
+        },
+        {
+          "name": "PositionChangeEvent",
+          "type": "AppCloudEvent",
+          "variants": [
+            "app"
+          ],
+          "properties": {
+            "errorData": null
+          },
+          "meta": {
+            "editorX": 227,
+            "editorY": 61,
+            "lastTrigger": "sent"
+          },
+          "triggers": {
+            "triggered": [],
+            "sent": []
+          }
+        },
+        {
+          "name": "DirectionToggle",
+          "type": "AppUIToggle",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 40,
+                  "height": 0,
+                  "x": 200,
+                  "y": 380,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "value": false
+          },
+          "meta": {
+            "editorX": 25,
+            "editorY": 473,
+            "lastTrigger": "changed"
+          },
+          "triggers": {
+            "triggered": [],
+            "changed": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "DirectionChangeEvent",
+                "targetAbility": "send"
+              }
+            ],
+            "checked": [],
+            "unchecked": []
+          }
+        },
+        {
+          "name": "DirectionLabel",
+          "type": "AppUILabel",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 100,
+                  "height": 60,
+                  "x": 50,
+                  "y": 390,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "text": "Direction",
+            "font": "18px Helvetica",
+            "color": "black",
+            "alignment": "left"
+          },
+          "meta": {
+            "editorX": 121,
+            "editorY": 534,
+            "lastTrigger": "triggered"
+          },
+          "triggers": {
+            "triggered": []
+          }
+        },
+        {
+          "name": "StopButton",
+          "type": "AppUIButton",
+          "variants": [
+            "app",
+            "ui"
+          ],
+          "properties": {
+            "errorData": null,
+            "layouts": {
+              "320": {
+                "560": {
+                  "width": 160,
+                  "height": 100,
+                  "x": 80,
+                  "y": 440,
+                  "rotation": 0,
+                  "propertyOverlay": {}
+                }
+              }
+            },
+            "visible": true,
+            "labelText": "Stop Motor",
+            "labelFont": "18px Helvetica",
+            "labelColor": "black",
+            "pressedData": {
+              "x": 0,
+              "y": 0
+            },
+            "releasedData": {
+              "x": 0,
+              "y": 0
+            },
+            "overData": {
+              "x": 0,
+              "y": 0
+            },
+            "leftData": {
+              "x": 0,
+              "y": 0
+            }
+          },
+          "meta": {
+            "editorX": 25,
+            "editorY": 617,
+            "lastTrigger": "pressed"
+          },
+          "triggers": {
+            "triggered": [],
+            "pressed": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": ""
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "MotorStopEvent",
+                "targetAbility": "send"
+              }
+            ],
+            "released": [],
+            "over": []
+          }
+        },
+        {
+          "name": "DirectionChangeEvent",
+          "type": "AppCloudEvent",
+          "variants": [
+            "app"
+          ],
+          "properties": {
+            "errorData": null
+          },
+          "meta": {
+            "editorX": 223,
+            "editorY": 472,
+            "lastTrigger": "sent"
+          },
+          "triggers": {
+            "triggered": [],
+            "sent": []
+          }
+        },
+        {
+          "name": "MotorStopEvent",
+          "type": "AppCloudEvent",
+          "variants": [
+            "app"
+          ],
+          "properties": {
+            "errorData": null
+          },
+          "meta": {
+            "editorX": 230,
+            "editorY": 617,
+            "lastTrigger": "sent"
+          },
+          "triggers": {
+            "triggered": [],
+            "sent": []
+          }
+        }
+      ]
+    },
+    "Cloud": {
+      "type": "cloud",
+      "compilerVersion": "latest",
+      "variants": [],
+      "meta": {},
+      "elements": [
+        {
+          "name": "VelocityChangeCmd",
+          "type": "CloudCommand",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(VelocityChangeCmd), ATMO_ABILITY(VelocityChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(VelocityChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 222,
+            "editorY": 11,
+            "lastTrigger": "commandQueued"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandQueued": []
+          },
+          "coupledElementName": "VelocityChangeCmd",
+          "coupledElementPlaneName": "AVR-IoT WG"
+        },
+        {
+          "name": "AccelChangeCmd",
+          "type": "CloudCommand",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(AccelChangeCmd), ATMO_ABILITY(AccelChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(AccelChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 226,
+            "editorY": 188,
+            "lastTrigger": "commandQueued"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandQueued": []
+          },
+          "coupledElementName": "AccelChangeCmd",
+          "coupledElementPlaneName": "AVR-IoT WG"
+        },
+        {
+          "name": "PositionChangeCmd",
+          "type": "CloudCommand",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(PositionChangeCmd), ATMO_ABILITY(PositionChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(PositionChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_UNSIGNED_INT"
+          },
+          "meta": {
+            "editorX": 226,
+            "editorY": 370,
+            "lastTrigger": "commandQueued"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandQueued": []
+          },
+          "coupledElementName": "PositionChangeCmd",
+          "coupledElementPlaneName": "AVR-IoT WG"
+        },
+        {
+          "name": "VelocityChangeEvent",
+          "type": "CloudEvent",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 30,
+            "editorY": 10,
+            "lastTrigger": "eventReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "eventReceived": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "VelocityChangeCmd",
+                "targetAbility": "sendCommand"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "VelocityStorage",
+                "targetAbility": "addData"
+              }
+            ]
+          },
+          "coupledElementName": "VelocityChangeEvent",
+          "coupledElementPlaneName": "Application"
+        },
+        {
+          "name": "AccelChangeEvent",
+          "type": "CloudEvent",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 27,
+            "editorY": 191,
+            "lastTrigger": "eventReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "eventReceived": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "AccelChangeCmd",
+                "targetAbility": "sendCommand"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "AccelStorage",
+                "targetAbility": "addData"
+              }
+            ]
+          },
+          "coupledElementName": "AccelChangeEvent",
+          "coupledElementPlaneName": "Application"
+        },
+        {
+          "name": "PositionChangeEvent",
+          "type": "CloudEvent",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 29,
+            "editorY": 370,
+            "lastTrigger": "eventReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "eventReceived": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "PositionChangeCmd",
+                "targetAbility": "sendCommand"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "PositionStorage",
+                "targetAbility": "addData"
+              }
+            ]
+          },
+          "coupledElementName": "PositionChangeEvent",
+          "coupledElementPlaneName": "Application"
+        },
+        {
+          "name": "DirectionChangeEvent",
+          "type": "CloudEvent",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 527,
+            "editorY": 89,
+            "lastTrigger": "eventReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "eventReceived": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "DirectionChangeCmd",
+                "targetAbility": "sendCommand"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "DirectionStorage",
+                "targetAbility": "addData"
+              }
+            ]
+          },
+          "coupledElementName": "DirectionChangeEvent",
+          "coupledElementPlaneName": "Application"
+        },
+        {
+          "name": "MotorStopEvent",
+          "type": "CloudEvent",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 528,
+            "editorY": 292,
+            "lastTrigger": "eventReceived"
+          },
+          "triggers": {
+            "triggered": [],
+            "eventReceived": [
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "MotorStopCmd",
+                "targetAbility": "sendCommand"
+              },
+              {
+                "mapping": {
+                  "value": {
+                    "code": "value"
+                  }
+                },
+                "targetOrder": [
+                  "value"
+                ],
+                "targetElement": "StopStorage",
+                "targetAbility": "addData"
+              }
+            ]
+          },
+          "coupledElementName": "MotorStopEvent",
+          "coupledElementPlaneName": "Application"
+        },
+        {
+          "name": "DirectionChangeCmd",
+          "type": "CloudCommand",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(DirectionChangeCmd), ATMO_ABILITY(DirectionChangeCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(DirectionChangeCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_BOOL"
+          },
+          "meta": {
+            "editorX": 722,
+            "editorY": 90,
+            "lastTrigger": "commandQueued"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandQueued": []
+          },
+          "coupledElementName": "DirectionChangeCmd",
+          "coupledElementPlaneName": "AVR-IoT WG"
+        },
+        {
+          "name": "MotorStopCmd",
+          "type": "CloudCommand",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": {},
+            "code": {
+              "trigger": "\treturn ATMO_Status_Success;",
+              "setup": "\n    \n\tATMO_CLOUD_RegisterCommandRxAbilityHandle(ATMO_ELEMENT_NAME(MotorStopCmd), ATMO_ABILITY(MotorStopCmd, commandReceived));\n\treturn ATMO_Status_Success;\n\t",
+              "commandReceived": "\n\tATMO_CreateValueConverted(out, ATMO_PROPERTY(MotorStopCmd, dataType), in);\n\treturn ATMO_Status_Success;\n\t"
+            },
+            "variables": {},
+            "embeddedPropertyConversions": {},
+            "codeUserChanged": {
+              "setup": false,
+              "commandReceived": false
+            },
+            "instance": "ATMO_DRIVERINSTANCE_CLOUD_CLOUD1",
+            "dataType": "ATMO_DATATYPE_VOID"
+          },
+          "meta": {
+            "editorX": 723,
+            "editorY": 291,
+            "lastTrigger": "commandQueued"
+          },
+          "triggers": {
+            "triggered": [],
+            "commandQueued": []
+          },
+          "coupledElementName": "MotorStopCmd",
+          "coupledElementPlaneName": "AVR-IoT WG"
+        },
+        {
+          "name": "VelocityStorage",
+          "type": "CloudStorage",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 221,
+            "editorY": 87,
+            "lastTrigger": "dataAdded"
+          },
+          "triggers": {
+            "triggered": [],
+            "dataAdded": [],
+            "dataUpdated": [],
+            "dataRemoved": [],
+            "dataQueried": []
+          }
+        },
+        {
+          "name": "StopStorage",
+          "type": "CloudStorage",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 722,
+            "editorY": 372,
+            "lastTrigger": "dataAdded"
+          },
+          "triggers": {
+            "triggered": [],
+            "dataAdded": [],
+            "dataUpdated": [],
+            "dataRemoved": [],
+            "dataQueried": []
+          }
+        },
+        {
+          "name": "AccelStorage",
+          "type": "CloudStorage",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 224,
+            "editorY": 273,
+            "lastTrigger": "dataAdded"
+          },
+          "triggers": {
+            "triggered": [],
+            "dataAdded": [],
+            "dataUpdated": [],
+            "dataRemoved": [],
+            "dataQueried": []
+          }
+        },
+        {
+          "name": "PositionStorage",
+          "type": "CloudStorage",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 229,
+            "editorY": 459,
+            "lastTrigger": "dataAdded"
+          },
+          "triggers": {
+            "triggered": [],
+            "dataAdded": [],
+            "dataUpdated": [],
+            "dataRemoved": [],
+            "dataQueried": []
+          }
+        },
+        {
+          "name": "DirectionStorage",
+          "type": "CloudStorage",
+          "variants": [
+            "cloud"
+          ],
+          "properties": {
+            "errorData": null,
+            "value": null
+          },
+          "meta": {
+            "editorX": 724,
+            "editorY": 171,
+            "lastTrigger": "dataAdded"
+          },
+          "triggers": {
+            "triggered": [],
+            "dataAdded": [],
+            "dataUpdated": [],
+            "dataRemoved": [],
+            "dataQueried": []
+          }
+        }
+      ],
+      "layout": {
+        "height": 1000,
+        "width": 1000,
+        "zIndexOrder": []
+      }
+    }
+  }
+}
